@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fire Detection</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Fire Detection System</h1>
+    
+    <div class="container">
+        <!-- Image Upload Section -->
+        <div class="section">
+            <h2>Upload Image</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="imageUpload" accept="image/*">
+                <button type="submit">Detect Fire</button>
+            </form>
+            <div id="uploadResult">
+                <img id="processedImage" style="max-width: 100%; display: none;">
+            </div>
+        </div>
+
+        <div class="detection-summary">
+            <h3>Detection Results</h3>
+            <div id="detectionResults"></div>
+        </div>
+        
+        <!-- Live Stream Section -->
+        <div class="section">
+            <h2>Live Detection</h2>
+            <button id="startCamera">Start Camera</button>
+            <video id="webcam" autoplay playsinline style="display: none;"></video>
+            <canvas id="canvas"></canvas>
+            <div id="detectionHistory"></div>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
